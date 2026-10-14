@@ -1,14 +1,103 @@
 {
   "project": "vietsub-app",
   "tasks": [
-    {"id": 1, "role": "architect", "title": "Write architecture.md and tasks.json", "status": "done"},
-    {"id": 2, "role": "developer", "title": "Cue model + SRT/VTT parser with BOM handling and malformed-block tolerance", "files": ["vietsub/models.py", "vietsub/parser.py"]},
-    {"id": 3, "role": "developer", "title": "Translator module: GoogleFreeTranslator with batching and 429 backoff; Mock/Dict translators", "files": ["vietsub/translator.py"]},
-    {"id": 4, "role": "developer", "title": "Writer module for SRT/VTT", "files": ["vietsub/writer.py"]},
-    {"id": 5, "role": "developer", "title": "Streamlit UI", "files": ["app.py"]},
-    {"id": 6, "role": "developer", "title": "pytest suite", "files": ["tests/"]},
-    {"id": 7, "role": "tester", "title": "Run pytest, write test_report.json"},
-    {"id": 8, "role": "debugger", "title": "Fix failures, max 4 rounds"},
-    {"id": 9, "role": "deliver", "title": "sample_data, README, launch app, zip"}
+    {
+      "id": 1,
+      "role": "architect",
+      "title": "Write architecture.md and tasks.json",
+      "status": "done"
+    },
+    {
+      "id": 2,
+      "role": "developer",
+      "title": "Cue model + SRT/VTT parser with BOM handling and malformed-block tolerance",
+      "files": [
+        "vietsub/models.py",
+        "vietsub/parser.py"
+      ]
+    },
+    {
+      "id": 3,
+      "role": "developer",
+      "title": "Translator module: GoogleFreeTranslator with batching and 429 backoff; Mock/Dict translators",
+      "files": [
+        "vietsub/translator.py"
+      ]
+    },
+    {
+      "id": 4,
+      "role": "developer",
+      "title": "Writer module for SRT/VTT",
+      "files": [
+        "vietsub/writer.py"
+      ]
+    },
+    {
+      "id": 5,
+      "role": "developer",
+      "title": "Streamlit UI",
+      "files": [
+        "app.py"
+      ]
+    },
+    {
+      "id": 6,
+      "role": "developer",
+      "title": "pytest suite",
+      "files": [
+        "tests/"
+      ]
+    },
+    {
+      "id": 7,
+      "role": "tester",
+      "title": "Run pytest, write test_report.json"
+    },
+    {
+      "id": 8,
+      "role": "debugger",
+      "title": "Fix failures, max 4 rounds"
+    },
+    {
+      "id": 9,
+      "role": "deliver",
+      "title": "sample_data, README, launch app, zip"
+    },
+    {
+      "id": 10,
+      "role": "developer",
+      "title": "ASR module (faster-whisper tiny/base int8, VAD, ja) + ffmpeg extraction",
+      "status": "done"
+    },
+    {
+      "id": 11,
+      "role": "developer",
+      "title": "Bilingual SRT writer",
+      "status": "done"
+    },
+    {
+      "id": 12,
+      "role": "developer",
+      "title": "Streamlit tabs: video mode + subtitle mode, cached model, MyMemory quota warning",
+      "status": "done"
+    },
+    {
+      "id": 13,
+      "role": "developer",
+      "title": "Mocked ASR tests",
+      "status": "done"
+    },
+    {
+      "id": 14,
+      "role": "developer",
+      "title": "Real E2E test with gTTS clip, timing/RAM measurement",
+      "status": "done"
+    },
+    {
+      "id": 15,
+      "role": "developer",
+      "title": "Deploy config: packages.txt, .streamlit/config.toml, pinned requirements",
+      "status": "done"
+    }
   ]
 }

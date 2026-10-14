@@ -1,0 +1,15 @@
+1
+00:00:00,000 --> 00:00:06,580
+Xin chào, hôm nay tôi sẽ nói về thời tiết ở Tokyo.
+
+2
+00:00:06,580 --> 00:00:13,080
+Trời nắng vào buổi sáng, nhưng trời sẽ mưa vào buổi chiều.
+
+3
+00:00:13,080 --> 00:00:15,680
+Vui lòng chồng lên nhau.
+
+4
+00:00:15,680 --> 00:00:17,680
+Cám ơn các bạn rất nhiều.

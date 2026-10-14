@@ -19,3 +19,14 @@ All file reads: `encoding="utf-8-sig"`; all writes: `encoding="utf-8"`. Uploaded
 
 ## Multi-line cues
 Lines in a cue are joined with `\n`; for batching, each cue is sent as one item and line breaks preserved by translating line by line within a cue.
+
+## v3: Video → subtitles (speech recognition)
+| Module | Responsibility |
+|---|---|
+| `vietsub/asr.py` | `extract_audio` (ffmpeg → 16 kHz mono WAV; PyAV fallback), `load_wav` (numpy, no PyAV needed), `load_model` (faster-whisper tiny/base, CPU int8), `transcribe` (language=ja, vad_filter, per-segment progress callback), `segments_to_cues`, `format_srt_time`, RAM-based `choose_default_model` |
+| `vietsub/writer.py` | adds `write_bilingual_srt` (JA line(s) then VI line(s), same timing) |
+| `app.py` | Two tabs: **Video → subtitles** (upload mp4/mkv/mov/webm → extract → ASR with progress → translate → download JA/VI/bilingual SRT) and **Subtitle file** (the original .srt/.vtt mode). Model cached with `st.cache_resource`. The sidebar warns about MyMemory's ~5,000 chars/day limit. |
+
+Flow: upload → temp file → ffmpeg WAV → numpy float32 → WhisperModel.transcribe → Cue list → translate_cues(Auto Google→MyMemory) → SRT bytes.
+
+Deployment: `packages.txt` (ffmpeg apt package), `.streamlit/config.toml` (`maxUploadSize = 500` MB).

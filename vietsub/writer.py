@@ -26,3 +26,12 @@ def to_bytes(text: str) -> bytes:
 def save_file(path: str, text: str) -> None:
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         f.write(text)
+
+
+def write_bilingual_srt(src: Iterable[Cue], dst: Iterable[Cue]) -> str:
+    """SRT where each cue shows the source text then the translation, same timing."""
+    src, dst = list(src), list(dst)
+    if len(src) != len(dst):
+        raise ValueError("source and translated cue counts differ")
+    merged = [s.with_text(f"{s.text}\n{d.text}") for s, d in zip(src, dst)]
+    return write_srt(merged)
