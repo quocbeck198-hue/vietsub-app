@@ -1,0 +1,16 @@
+1
+00:00:01,000 --> 00:00:03,000
+Chào buổi sáng. Hôm nay là một ngày đẹp trời, phải không?
+
+2
+00:00:03,500 --> 00:00:06,000
+Chúng tôi có một quán cà phê mới gần nhà ga.
+
+3
+00:00:06,500 --> 00:00:09,000
+Bạn có muốn tham gia cùng chúng tôi để uống một tách cà phê không?
+Ba giờ chiều được không?
+
+4
+00:00:09,500 --> 00:00:12,000
+Cảm ơn! Tôi rất mong chờ điều đó.
